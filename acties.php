@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="indexheader">
+    <header>
         <div class="header"></div>
         <nav>
             <div class="logo">
@@ -29,12 +29,9 @@
         </nav>
     </header>
 <div class="slideshowcontainer">
-    <img class="mySlides" src="Image/pizza.jpg">
-    <img class="mySlides" src="Image/pizza2.jpg">
-    <img class="mySlides" src="Image/pizza3.jpg">
-    <img class="mySlides" src="Image/pizza4.jpg">
-    <img class="mySlides" src="Image/pizza5.jpg">
-    
+    <img class="mySlides" src="Image/ss1.png">
+    <img class="mySlides" src="Image/ss2.png">
+    <img class="mySlides" src="Image/ss3.png">
     <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 <script>
