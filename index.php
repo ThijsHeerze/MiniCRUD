@@ -10,33 +10,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Fruktur&family=Irish+Grover&family=Poppins:wght@100;200&family=Roboto:wght@300&family=Ubuntu:wght@300&family=Zen+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header class="indexheader">
+<body class="indexbody">
+<header>
         <div class="header"></div>
         <nav>
+            <!-- <input class="searchbar" type="text" placeholder="Search.."> -->
+            <ul class="leftul">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="pizza.php">Pizza's</a></li>
+                <li><a href="dranken.php">Dranken</a></li>
+            </ul>
             <div class="logo">
                 <img src="Image/nyplogo.png" alt="logo">
             </div>
-            <input class="searchbar" type="text" placeholder="Search..">
-            <ul>
-                <div class="ulborder">
-                <li><a href="/acties.php">Acties</a></li>
-                <li><a href="/pizza.php">Pizza's</a></li>
-                <li><a href="/dranken.php">Dranken</a></li>
-                <li><a href="/winkelwagen.php">Winkelwagen</a></li>
-                <li><a href="/login.php">Inloggen</a></li></div>
+            <ul class="rightul">
+                <li><a href="winkelwagen.php">Winkelwagen</a></li>
+                <li><a href="login.php">Inloggen</a></li></div>
             </ul>
         </nav>
     </header>
 <div class="slideshowcontainer">
-    <img class="mySlides" src="Image/pizza.jpg">
-    <img class="mySlides" src="Image/pizza2.jpg">
-    <img class="mySlides" src="Image/pizza3.jpg">
+    <!-- <img class="mySlides" src="Image/pizza.jpg">
+    <img class="mySlides" src="Image/pizza2.jpg"> -->
+    <!-- <img class="mySlides" src="Image/pizza3.jpg">
     <img class="mySlides" src="Image/pizza4.jpg">
-    <img class="mySlides" src="Image/pizza5.jpg">
+    <img class="mySlides" src="Image/pizza5.jpg"> -->
     
     <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
+    <!-- <div class="slideshowcontainer">
+    <img class="mySlides" src="Image/cola.png">
+    <img class="mySlides" src="Image/fanta.png.crdownload">
+    <img class="mySlides" src="Image/redbull.png"> -->
 <script>
 var slideIndex = 0;
 carousel();
@@ -90,6 +96,16 @@ function carousel() {
                     <li>Blog</li>
                 </ul>
                 </div>
+                <div class="social"><li><b>Volg ons op</b></li>
+                <div class="footerimg">
+                    <img src="Image/facebook.svg" alt="facebook">
+                    <img src="Image/twitter.svg" alt="twitter">
+                    <img src="Image/instagram.svg" alt="instagram">
+                    <img src="Image/youtube.svg" alt="youtube">
+                </div>
+                </div>
+                <div class="footerbutton"><button class="submit" type="submit">Login</button>
+                <button class="maak-een-account" type="maak-een-account">Maak een account</button></div>
             </div>
         </div>
     </footer>

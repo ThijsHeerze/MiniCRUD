@@ -10,30 +10,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Fruktur&family=Irish+Grover&family=Poppins:wght@100;200&family=Roboto:wght@300&family=Ubuntu:wght@300&family=Zen+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header>
+<body class="indexbody">
+<header>
         <div class="header"></div>
         <nav>
+            <!-- <input class="searchbar" type="text" placeholder="Search.."> -->
+            <ul class="leftul">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="pizza.php">Pizza's</a></li>
+                <li><a href="dranken.php">Dranken</a></li>
+            </ul>
             <div class="logo">
                 <img src="Image/nyplogo.png" alt="logo">
             </div>
-            <input class="searchbar" type="text" placeholder="Search..">
-            <ul>
-                <div class="ulborder">
-                <li><a href="/acties.php">Acties</a></li>
-                <li><a href="/pizza.php">Pizza's</a></li>
-                <li><a href="/dranken.php">Dranken</a></li>
-                <li><a href="/winkelwagen.php">Winkelwagen</a></li>
-                <li><a href="/login.php">Inloggen</a></li></div>
+            <ul class="rightul">
+                <li><a href="winkelwagen.php">Winkelwagen</a></li>
+                <li><a href="login.php">Inloggen</a></li></div>
             </ul>
         </nav>
-    </header>
-<div class="slideshowcontainer">
-    <img class="mySlides" src="Image/ss1.png">
-    <img class="mySlides" src="Image/ss2.png">
-    <img class="mySlides" src="Image/ss3.png">
-    <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+</header>
+<div class="drankenbody">
+<div class="drankencontainer">
+    <img src="Image/frisrank.jpg" alt="Frisdrank">
+<form action="winkelwagen.php">
+  <label for="dranken">Dranken</label>
+  <select id="dranken" name="dranken">Kies je drinken
+    <option value="dranken">Cola</option>
+    <option value="dranken">Fanta</option>
+    <option value="dranken">Sprite</option>
+    <option value="dranken">7up</option>
+    <option value="dranken">Redbull</option>
+    <option value="dranken">Monster</option>
+  </select>
+  <input type="submit" value="Bestel">
+</form>
+    </div>
+    </div>
 <script>
 var slideIndex = 0;
 carousel();
@@ -51,7 +63,18 @@ function carousel() {
 }
 </script>
 </div>
-    <footer>
+<!-- <form action="winkelwagen.php">
+  <label for="dranken">Pizza</label>
+  <select id="dranken" name="dranken">
+    <option value="dranken">cola</option>
+    <option value="dranken">fanta</option>
+    <option value="dranken">sprite</option>
+    <option value="dranken">redbull</option>
+    <option value="dranken">fernandes</option>
+  </select>
+  <input type="submit" value="Submit">
+</form> -->
+<footer>
         <div class="footercontainer">
             <div class="footerborder">
                 <div class="footerfixed1">
@@ -87,6 +110,16 @@ function carousel() {
                     <li>Blog</li>
                 </ul>
                 </div>
+                <div class="social"><li><b>Volg ons op</b></li>
+                <div class="footerimg">
+                    <img src="Image/facebook.svg" alt="facebook">
+                    <img src="Image/twitter.svg" alt="twitter">
+                    <img src="Image/instagram.svg" alt="instagram">
+                    <img src="Image/youtube.svg" alt="youtube">
+                </div>
+                </div>
+                <div class="footerbutton"><button class="submit" type="submit">Login</button>
+                <button class="maak-een-account" type="maak-een-account">Maak een account</button></div>
             </div>
         </div>
     </footer>
