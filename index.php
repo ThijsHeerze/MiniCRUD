@@ -11,24 +11,41 @@
     <title>Document</title>
 </head>
 <body class="indexbody">
-<header>
+    <header>
         <div class="header"></div>
         <nav>
-            <!-- <input class="searchbar" type="text" placeholder="Search.."> -->
-            <ul class="leftul">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="pizza.php">Pizza's</a></li>
-                <li><a href="dranken.php">Dranken</a></li>
-            </ul>
             <div class="logo">
                 <img src="Image/nyplogo.png" alt="logo">
             </div>
-            <ul class="rightul">
-                <li><a href="winkelwagen.php">Winkelwagen</a></li>
-                <li><a href="login.php">Inloggen</a></li></div>
+            <ul class="ul"> 
+            <li><a href="index.php">Home</a></li>
+                <li><a href="pizza.php">Pizza's</a></li>
+                <li><a href="reserveren.php">Reserveren</a></li>          
+                <li><a href="winkelwagen.php"><img class="shoppingcart" src="Image/shopping-cart.png" alt=""></a></li>
+                <li><a class="navbutton" href="login.php">Inloggen</a></li></div>
+            </ul>
+            </div>
             </ul>
         </nav>
     </header>
+    <?php
+    // require_once('includes/connect.php');
+
+    // $sql = "SELECT * FROM todos";
+    // $stmt = $connect->prepare($sql);
+    // $stmt->execute();
+    // $result = $stmt->fetchAll();
+
+    // foreach ($result as $todo) {
+
+    // }
+    ?>
+    <div class="homebody">
+        <div class="homecontainer">
+            <div class="homeimg"></div>
+        </div>
+    </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptatibus blanditiis molestiae magni in illum, officiis totam itaque adipisci. Similique necessitatibus id blanditiis laborum dolor corrupti sapiente possimus debitis qui?
 <div class="slideshowcontainer">
     <!-- <img class="mySlides" src="Image/pizza.jpg">
     <img class="mySlides" src="Image/pizza2.jpg"> -->
@@ -104,8 +121,10 @@ function carousel() {
                     <img src="Image/youtube.svg" alt="youtube">
                 </div>
                 </div>
-                <div class="footerbutton"><button class="submit" type="submit">Login</button>
-                <button class="maak-een-account" type="maak-een-account">Maak een account</button></div>
+                <div class="footerbutton">
+                  <button class="loginbutton">Login</button>
+                  <button class="reserveerbuttonfooter">Reserveer</button>
+                </div>
             </div>
         </div>
     </footer>

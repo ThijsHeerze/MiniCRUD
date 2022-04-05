@@ -7,123 +7,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Fruktur&family=Irish+Grover&family=Poppins:wght@100;200&family=Roboto:wght@300&family=Ubuntu:wght@300&family=Zen+Antique&family=Zen+Kurenaido&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Fruktur&family=Irish+Grover&family=Poppins:wght@100;200&family=Roboto:wght@300&family=Ubuntu:wght@300&family=Zen+Antique&family=Zen+Kurenaido&display=swap" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body class="indexbody">
-    <header>
-      <div class="header"></div>
-      <nav>
-        <!-- <input class="searchbar" type="text" placeholder="Search.."> -->
-        <ul class="leftul">
-          <li><a href="index.php">Home</a></li>
-          <li><a href="pizza.php">Pizza's</a></li>
-          <li><a href="dranken.php">Dranken</a></li>
-        </ul>
-        <div class="logo">
-          <img src="Image/nyplogo.png" alt="logo" />
-        </div>
-        <ul class="rightul">
-          <li><a href="winkelwagen.php">Winkelwagen</a></li>
-          <li><a href="login.php">Inloggen</a></li>
-        </ul>
-      </nav>
+  <header>
+        <div class="header"></div>
+        <nav>
+            <div class="logo">
+                <img src="Image/nyplogo.png" alt="logo">
+            </div>
+            <ul class="ul"> 
+            <li><a href="index.php">Home</a></li>
+                <li><a href="pizza.php">Pizza's</a></li>
+                <li><a href="reserveren.php">Reserveren</a></li>          
+                <li><a href="winkelwagen.php"><img class="shoppingcart" src="Image/shopping-cart.png" alt=""></a></li>
+                <li><a class="navbutton" href="login.php">Inloggen</a></li></div>
+            </ul>
+            </ul>
+        </nav>
     </header>
-    <div class="bestellen"><h3><b>Maak je keuze</b></h3></div>
+<?php
+
+require_once('includes/connect.php');
+  
+$sql = "SELECT * FROM producten";
+$stmt = $connect->prepare($sql);
+$stmt->execute();
+$result_producten = $stmt->fetchAll();
+
+global $conn;
+
+$query = "SELECT * FROM producten";
+
+$error = '';
+
+
+
+function showAllProducts() {
+    global $conn, $error, $query;
+    $result = $conn->prepare($query);
+    $result->execute();
+    if (!empty($query)) {
+        foreach ($result as $value) {
+            echo "<div class='product_container'>";
+                echo "<form action= method=post>";
+                    echo "<div class=''> {$value["naam"]} </div>";
+                    echo "<div class=''> {$value["prijs"]} </div>";
+                    echo "<div class=''>";
+                        echo "<img class='' src={$value["Image"]} alt={$value["afbeelding"]} >";
+                    echo "</div>";
+                    echo "<div class=''><input type=submit value=ADD class=></div>";
+                echo "</form>";
+            echo "</div>";
+        }
+    } else {
+        $error = "No results!";
+    }
+}
+    ?>
+    <div class="maakjekeuze"><b>Kies hieronder jou pizza!</b></div>
     <div class="pizzabody">
-      <div class="pizzacontainer">
+      <?php
+        // forEach($result_producten as $product) {
+        //   echo $product['naam'];
+        //   echo $product['prijs'];
+        //   echo $product['afbeelding'];
+        // }
+      ?>
+    <!-- <div class="pizzacontainer">
+        <img src="Image/pizza.jpg" alt="" />
         <form action="winkelwagen.php">
-          <label class="lso" for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <!-- <option value="pizza">Margarita</option> -->
-          </select>
-          <input type="submit" value="Bestel" />
-          <img src="Image/mozzarella.jpg" alt="" />
+          <b><input class="bestelknop" type="submit" value="Bestel" /></b>
         </form>
-      </div>
-      <div class="pizzacontainer">
-        <img src="Image/pizzab.jpeg" alt="" />
+      </div> -->
+      <!-- <div class="pizzacontainer">
+        <img src="Image/salamiui.jpeg" alt="" />
         <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Hawai</option>
-          </select>
-          <input type="submit" value="Bestel" />
-        </form>
-      </div>
-      <div class="pizzacontainer">
-        <img src="Image/salami.jpeg" alt="" />
-        <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Salami</option>
-          </select>
-          <input type="submit" value="Bestel" />
+          <input class="bestelknop" type="submit" value="Bestel" />
         </form>
       </div>
       <div class="pizzacontainer">
         <img src="Image/pizzaei.jpeg" alt="" />
         <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Mozzarella</option>
-          </select>
-          <input type="submit" value="Bestel" />
+          <input class="bestelknop" type="submit" value="Bestel" />
+        </form>
+      </div>
+      <div class="pizzacontainer">
+        <img src="Image/mozzarella.jpg" alt="" />
+        <form action="winkelwagen.php">
+          <input class="bestelknop" type="submit" value="Bestel" />
         </form>
       </div>
     </div>
     <div class="pizzabody">
-      <div class="pizzacontainer">
-        <img src="Image/pizzab.jpeg" alt="" />
+    <div class="pizzacontainer">
+        <img src="Image/pizzafetta.jpeg" alt="" />
         <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Mozzarella</option>
-          </select>
-          <input type="submit" value="Bestel" />
-        </form>
-      </div>
-      <div class="pizzacontainer">
-        <img src="Image/pizzawortel.jpeg" alt="" />
-        <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Mozzarella</option>
-          </select>
-          <input type="submit" value="Bestel" />
+          <input class="bestelknop" type="submit" value="Bestel" />
         </form>
       </div>
       <div class="pizzacontainer">
         <img src="Image/pizzaolijven.jpeg" alt="" />
         <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Mozzarella</option>
-          </select>
-          <input type="submit" value="Bestel" />
+          <input class="bestelknop" type="submit" value="Bestel" />
+        </form>
+      </div>
+      <div class="pizzacontainer">
+        <img src="Image/pizzapeper.jpeg" alt="" />
+        <form action="winkelwagen.php">
+          <input class="bestelknop" type="submit" value="Bestel" />
         </form>
       </div>
       <div class="pizzacontainer">
         <img src="Image/pizzatomaat.jpeg" alt="" />
         <form action="winkelwagen.php">
-          <label for="pizza">Pizza</label>
-          <select id="pizza" name="pizza">
-            <option value="pizza">Mozzarella</option>
-          </select>
-          <input type="submit" value="Bestel" />
+          <input class="bestelknop" type="submit" value="Bestel" />
         </form>
       </div>
     </div>
-
     <div class="pizzabody">
-        <div class="pizzacontainer">
-          <img src="Image/pizzab.jpeg" alt="" />
-            <input type="submit" value="Bestel" />
-        </div>
-
+    <div class="pizzacontainer">
+        <img src="Image/pizzawortel.jpeg" alt="" />
+        <form action="winkelwagen.php">
+          <input class="bestelknop" type="submit" value="Bestel" />
+        </form>
+      </div>
+      <div class="pizzacontainer">
+        <img src="Image/salami.jpeg" alt="" />
+        <form action="winkelwagen.php">
+          <input class="bestelknop" type="submit" value="Bestel" />
+        </form>
+      </div>
+      <div class="pizzacontainer">
+        <img src="Image/salami2.jpeg" alt="" />
+        <form action="winkelwagen.php">
+          <input class="bestelknop" type="submit" value="Bestel" />
+        </form>
+      </div>
+      <div class="pizzacontainer">
+        <img src="Image/salamichampion.jpeg" alt="" />
+        <form action="winkelwagen.php">
+          <input class="bestelknop" type="submit" value="Bestel" />
+        </form>
+      </div> -->
+    </div>
     <footer>
       <div class="footercontainer">
         <div class="footerborder">
@@ -170,10 +198,8 @@
             </div>
           </div>
           <div class="footerbutton">
-            <button class="submit" type="submit">Login</button>
-            <button class="maak-een-account" type="maak-een-account">
-              Maak een account
-            </button>
+            <button class="loginbutton">Login</button>
+            <button class="reserveerbuttonfooter">Reserveer</button>
           </div>
         </div>
       </div>
