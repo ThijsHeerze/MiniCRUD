@@ -26,7 +26,7 @@ header {
 }
 
 .indexbody {
-  background: url(/MiniCRUD/Image/pizzabackground.jpg);
+  background: url(/MiniCRUD/image/pizzabackground.jpg);
   background-size: cover;
 }
 
@@ -307,20 +307,24 @@ nav ul li a:hover {
 
 .homeimg {
   width: 100%;
-  background-image: url(../Image/pizzawortel.jpeg);
+  background-image: url(../image/pizzawortel.jpeg);
   box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 50%);
   background-size: cover;
 }
 
 .pizzabody {
   width: 100%;
-  height: 450px;
+  height: 2000px;
   background-color: rgba(0 0 0 / 40%);
   color: white;
   margin-top: 25px;
   margin-bottom: 25px;
   display: flex;
   justify-content: space-around;
+}
+
+.php-pizza-container {
+  display: flex;
 }
 
 .pizzacontainer {
@@ -533,7 +537,7 @@ input {
 .reserveerafbeelding2 {
   width: 100%;
   height: 100%;
-  background-image: url(../Image/pizzapeperselie.jpg);
+  background-image: url(../image/pizzapeperselie.jpg);
   box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 50%);
   background-size: cover;
 }
@@ -588,7 +592,7 @@ input {
 }
 
 .inlogbody {
-  background-image: url(../Image/pizza.jpg);
+  background-image: url(../image/pizza.jpg);
   box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 10%);
   background-size: cover;
   width: 100%;
