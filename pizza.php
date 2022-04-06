@@ -1,7 +1,7 @@
 <?php 
     include_once('includes/header.php');
 ?>
-    <div class="maakjekeuze"><b>Kies hieronder jou pizza!</b></div>
+    <div class="maakjekeuze"><b>Kies hieronder jouw pizza!</b></div>
     <div class="pizzabody">
     <?php
         // forEach($result_producten as $product) {
