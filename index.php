@@ -1,25 +1,10 @@
 <?php 
     include_once('includes/header.php');
 ?>
-
-    <?php
-    // require_once('includes/connect.php');
-
-    // $sql = "SELECT * FROM todos";
-    // $stmt = $connect->prepare($sql);
-    // $stmt->execute();
-    // $result = $stmt->fetchAll();
-
-    // foreach ($result as $todo) {
-
-    // }
-    ?>
-    <div class="homebody">
-        <div class="homecontainer">
-            <div class="homeimg"></div>
-        </div>
+    <div class="home-body">
+        <div class="home-img"><b class="home-img-txt">Welkom bij New York Pizza</b></div>
+            <div class="home-container"><a href="#pizza.php"></a><button class="pizzas">Pizza's</button></div>
     </div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore voluptatibus blanditiis molestiae magni in illum, officiis totam itaque adipisci. Similique necessitatibus id blanditiis laborum dolor corrupti sapiente possimus debitis qui?
 <div class="slideshowcontainer">
     <!-- <img class="mySlides" src="image/pizza.jpg">
     <img class="mySlides" src="image/pizza2.jpg"> -->
@@ -52,7 +37,6 @@ function carousel() {
 </script>
 </div>
    
-
 <?php 
     include_once('includes/footer.php');
 ?>

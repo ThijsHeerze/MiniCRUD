@@ -3,7 +3,7 @@
 ?>
   <body class="inlogbody">
     <div class="inlogformulier">
-      <form class="inlogform" action="index.php" method="post"><div class="inloggen"><b>Hier kun je inloggen</b></div>
+      <form class="inlogform" action="index.php" method="post"><div class="inloggen"><b>Log in</b></div>
         <div class="container">
         <label for="uname"><b>Naam</b></label>
         <input class="inloginput" type="text" placeholder="Enter Username" name="uname" required>
@@ -13,21 +13,6 @@
       </form>
     </div>
   </div>
-  <?php
-    if(isset($_POST['inloggen'])) {
-
-        // QUERY OM TE CONTROLEREN OF DE ADMIN GEGEVENS KLOPPEN
-        
-        session_start();
-        $_SESSION['admin'] = true;
-
-        header('Location: ../admin.php');
-        exit();
-    } else {
-        header('Location: ../index.php');
-        exit();
-    }
-?>
 <script>
 
   const inputs = document.querySelectorAll("form input");
@@ -82,10 +67,7 @@
     // $stmt= $pdo->prepare($sql);
     // $stmt->execute([$name, $surname, $sex]);
 ?>
-    <script src="JS/main.js"></script>
-</body>
-</html>
-
+<script src="JS/main.js"></script>
 <?php 
     include_once('includes/footer.php');
 ?>

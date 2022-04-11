@@ -18,10 +18,10 @@
                 <img src="image/nyplogo.png" alt="logo">
             </div>
             <ul class="ul"> 
-            <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="pizza.php">Pizza's</a></li>
                 <li><a href="reserveren.php">Reserveren</a></li>          
-                <li><a href="winkelwagen.php"><img class="shoppingcart" src="image/shopping-cart.png" alt=""></a></li>
+                <li><a class="navbutton" href="winkelwagen.php">Winkelwagen</a></li></div>
                 <li><a class="navbutton" href="login.php">Inloggen</a></li></div>
             </ul>
         </nav>

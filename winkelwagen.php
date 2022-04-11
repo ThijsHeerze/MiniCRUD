@@ -2,7 +2,10 @@
     include_once('includes/header.php');
 ?>
 <?php
-    require_once('includes/connect.php');
+    require_once('includes/pizza.php');
+    session_start($_GET) {
+
+    }
   
     $sql = "SELECT * FROM producten";
     $stmt = $connect->prepare($sql);
