@@ -4,7 +4,6 @@
 <?php
     require_once('includes/pizza.php');
     session_start($_GET) {
-
     }
   
     $sql = "SELECT * FROM producten";
@@ -12,9 +11,7 @@
     $stmt->execute();
     $result_producten = $stmt->fetch();
 ?>
-    <script src="JS/main.js"></script>
-</body>
-</html>
+<script src="JS/main.js"></script>
 
 <?php 
     include_once('includes/footer.php');

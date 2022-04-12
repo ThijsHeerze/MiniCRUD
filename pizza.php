@@ -11,6 +11,31 @@ $sql = "SELECT * FROM producten";
 $stmt = $connect->prepare($sql);
 $stmt->execute();
 $result_producten = $stmt->fetchAll();
+
+// include("pizza.php");
+
+global $connect;
+
+$query = "";
+
+$error = '';
+
+if (isset($_POST["submit"])) {
+    if (!empty($_POST["zoekbalk"])) {
+        $query = "SELECT * FROM producten WHERE product_naam = '".$_POST["zoekbalk"]."'";
+        return;
+    } else {
+        $query = "SELECT * FROM producten ORDER BY productenID ASC";
+    }
+}
+
+if (isset($_POST["submit"])) {
+    $query = "SELECT * FROM producten WHERE naam = East Side Shoarma";
+}
+
+if (isset($_POST["allessubmit"])) {
+    $query = "SELECT * FROM producten ORDER BY productenID ASC";
+}
   
     if (!empty($result_producten)) {
       foreach ($result_producten as $product) {

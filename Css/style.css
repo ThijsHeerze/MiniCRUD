@@ -646,40 +646,31 @@ input {
   transition: 0s;
 }
 
-.inlogbody {
-  background-image: url(../image/loginbackground.jpg);
-  box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 10%);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
 .inlogformulier {
-  margin: 25px;
+  width: 100%;
+  height: 800px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  background-size: cover;
+  background-image: url(../image/inlogpizza.jpg);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .inloggen {
-  font-size: 35px;
-  background-color: black;
+  font-size: 45px;
   width: 100%;
-  height: 120px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
 }
 
 .inlogform {
-  width: 40%;
-  background-color: grey;
+  width: 30%;
   border-radius: 25px;
-  font-size: 28px;
-  justify-content: center;
-  align-items: center;
+  font-size: 35px;
 }
 
 .inloginput[type="text"],
