@@ -27,6 +27,15 @@ body.admin-body {
   color: red !important;
 }
 
+.table {
+  background-color: rgb(0 0 0 / 10%);
+}
+
+tr th {
+  border: 2px solid black;
+  width: 100%;
+}
+
 .pizza-toevoegen-form {
   margin-top: 100px;
   width: 100%;
@@ -36,8 +45,8 @@ body.admin-body {
   background-color: #143f6b;
   padding: 0px 100px;
   margin-bottom: 50px;
-  /* row-gap: 30px;
-  column-gap: 30px; */
+  row-gap: 30px;
+  column-gap: 30px;
 }
 
 .pizza-toevoegen {
@@ -46,4 +55,12 @@ body.admin-body {
   align-items: center;
   width: 20%;
   height: 50px;
+}
+
+.update-button {
+  background-color: #6bcb77;
+}
+
+.delete-button {
+  background-color: red;
 }

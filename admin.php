@@ -22,7 +22,7 @@
                     <input type="text" id="aimg" name="afbeelding" placeholder="Afbeelding...">
                     <input type="submit" value="Toevoegen" name="toevoegen">
                 </form>
-                <table>
+                <table class="table">
                     <tr>
                         <th>Naam</th>
                         <th>Prijs</th>
@@ -35,8 +35,7 @@
                         $stmt = $connect->prepare($sql);
                         $stmt->execute();
                         $result_producten = $stmt->fetchAll(); 
-                    ?>
-                    <?php 
+                    
                         foreach ($result_producten as $product) {
                             echo "<tr>";
                             echo "<td>".$product["naam"]."</td>";
@@ -48,7 +47,6 @@
                         } 
                     ?>
                 </table>
-                </form>
             </div>
         </div>
     </body>
