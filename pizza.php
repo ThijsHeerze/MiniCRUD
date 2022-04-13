@@ -2,7 +2,7 @@
     include_once('includes/header.php');
 ?>
     <div class="maakjekeuze"><b>Kies hieronder jouw pizza!</b></div>
-    <div id="#" class="pizzabody">
+    <div class="pizzabody">
 <?php
 
 require_once('includes/connect.php');
@@ -12,7 +12,7 @@ $stmt = $connect->prepare($sql);
 $stmt->execute();
 $result_producten = $stmt->fetchAll();
 
-// include("pizza.php");
+include_once("pizza.php");
 
 global $connect;
 
@@ -51,6 +51,8 @@ if (isset($_POST["allessubmit"])) {
         echo "</div>";  
         }
     } else {
+      // Print een DIV uit met 'Er zijn geen producten gevonen'
+        echo "<div>Er zijn geen producten gevonden</div>";
         $error = "No results!";
     }
     ?>

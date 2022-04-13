@@ -221,10 +221,6 @@ nav ul li {
   }
 }
 
-.shoppingcart {
-  width: 28px;
-}
-
 nav ul li a {
   text-decoration: none;
   letter-spacing: 1px;
@@ -282,12 +278,9 @@ nav ul li a:hover {
 
 .home-body {
   width: 100%;
-  background-color: black;
-  color: black;
 }
 
 .home-container {
-  background-color: black;
   display: flex;
   width: 100%;
   height: 100px;
@@ -347,22 +340,21 @@ nav ul li a:hover {
   transition: all 0.8s;
 }
 
-/* content: "";
-  background: #f1f1f1;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s; */
-
 .pizzas:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+.pizzabody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 30px;
+  column-gap: 30px;
+  background-image: url(../image/salami.jpg);
+  background-size: cover;
 }
 
 .pizza-body {
@@ -476,60 +468,6 @@ nav ul li a:hover {
 input {
   flex-direction: column;
 }
-
-/* .bestelknop {
-  color: black;
-  background-color: white;
-  border: #009a44 solid 4px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  width: 240px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 19px;
-}
-.bestelknop:hover {
-  background-color: rgba(0 0 0 / 10%);
-  border: #009a44 solid 2px;
-  transition-duration: 0.75s;
-  color: white;
-}
-.bestelknop:active {
-  background-color: #009a44;
-  transition-duration: 0.01s;
-}
-@media screen and (max-width: 1100px) {
-  .bestelknop {
-    width: 220px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .bestelknop {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .bestelknop {
-    width: 180px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .bestelknop {
-    width: 160px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .bestelknop {
-    width: 140px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .bestelknop {
-    width: 100px;
-  }
-} */
 
 .reserveercontainer {
   width: 100%;

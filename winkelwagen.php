@@ -3,8 +3,8 @@
 ?>
 <?php
     require_once('includes/pizza.php');
-    session_start($_GET) {
-    }
+    // session_start($_GET) {
+    // }
   
     $sql = "SELECT * FROM producten";
     $stmt = $connect->prepare($sql);

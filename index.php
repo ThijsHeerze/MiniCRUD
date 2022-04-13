@@ -2,8 +2,8 @@
     include_once('includes/header.php');
 ?>
     <div class="home-body">
-        <div class="home-img"><b class="home-img-txt">Welkom bij New York Pizza</b></div>
-            <div class="home-container"><a href="#pizza.php"></a><button class="pizzas">Pizza's</button></div>
+        <div class="home-img"><b class="home-img-txt">Welkom bij New York Pizza</b>
+            <!-- <div class="home-container"><a href="#pizza.php"></a><button class="pizzas">Pizza's</button></div> -->
     </div>
 <div class="slideshowcontainer">
     <!-- <img class="mySlides" src="image/pizza.jpg">

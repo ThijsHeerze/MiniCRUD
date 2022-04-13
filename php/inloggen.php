@@ -1,17 +1,26 @@
 <?php
-    if(isset($_POST['inloggen'])) {
-    //stap 1 database tabelnaam aanmaken met gebruikersnaam en ww
-    //stap 2 het ophalen van data
-    $query = 'SELECT * FROM admin WHERE id';
-    //stap 3 sessie aanmaken
-    session_start();
-        $_SESSION['admin'] = true;
-    //stap 4 doorsturen naar adminpagina als ingevulde gegevens correct zijn
-    if(){
-    header('Location: ../admin.php');
-        exit();
+    if(isset($_POST['uname'])) {
+        include_once('../includes/connect.php');
+        
+        $query = 'SELECT * FROM inloggen WHERE gebruiker = :gebruiker AND wachtwoord = :wachtwoord';
+        $stmt = $connect->prepare($query);
+        $stmt->bindParam(':gebruiker', $_POST['uname']);
+        $stmt->bindParam(':wachtwoord', $_POST['psw']);
+        $stmt->execute();
+        $result = $stmt->fetch();
+
+        // IF statement om te kijken of er EEN result is teruggekomen
+        if ($stmt->rowcount() > 0) {
+            session_start();
+            $_SESSION['admin'] = true;
+
+            header('Location: ../admin.php');
+            exit();
+        } else {
+            header('Location: ../login.php?error=Gebruikersnaam of wachtwoord is fout!');
+        }
     } else {
-        header('Location: ../index.php');
+        header('Location: ../login.php');
         exit();
     }
 ?>
