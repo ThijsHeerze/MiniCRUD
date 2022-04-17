@@ -42,10 +42,10 @@
                     <img src="image/youtube.svg" alt="youtube">
                 </div>
                 </div>
-                <div class="footerbutton">
+                <!-- <div class="footerbutton">
                   <button class="loginbutton">Login</button>
                   <button class="reserveerbuttonfooter">Reserveer</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>

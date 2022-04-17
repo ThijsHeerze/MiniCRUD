@@ -14,6 +14,7 @@
       echo "<div class='reserveercontainer'><p>Maak hieronder je reservering!</p></div>";
         echo "<div class='hierkunjereserveren'>";
           echo "<div class='reserveerafbeelding2'>";
+          echo "<form action= method=post>";
           echo "<div class='reserveerform'>";
             echo "<label for='uname'><p class='bnaam'>Naam</p></label>";
             echo "<input class='reserveerinput' type='text' placeholder='Naam...' name='uname' {$reserveren['naam']} required>";
