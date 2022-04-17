@@ -2,11 +2,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
-  color: white;
+  color: black;
 }
 
 header {
-  height: 125px;
+  height: 150px;
 }
 
 .indexbody {
