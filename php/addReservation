@@ -2,11 +2,11 @@
     if(isset($_POST['toevoegen'])) {
         include_once('../includes/connect.php');
         
-        $sql = 'INSERT INTO producten (naam, prijs, afbeelding) VALUES (:naam, :prijs, :afbeelding)';
+        $sql = 'INSERT INTO reserveren (naam, datum, aantal personen) VALUES (:naam, :datum, :aantal personen)';
         $stmt = $connect->prepare($sql);
         $stmt->bindParam(':naam', $_POST['naam']);
-        $stmt->bindParam(':prijs', $_POST['prijs']);
-        $stmt->bindParam(':afbeelding', $_POST['afbeelding']);
+        $stmt->bindParam(':datum', $_POST['datum']);
+        $stmt->bindParam(':aantal personen', $_POST['aantal personen']);
         $stmt->execute();
 
         header('Location: ../admin.php');

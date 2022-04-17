@@ -16,25 +16,25 @@ include_once("pizza.php");
 
 global $connect;
 
-$query = "";
+$sql = "";
 
 $error = '';
 
 if (isset($_POST["submit"])) {
     if (!empty($_POST["zoekbalk"])) {
-        $query = "SELECT * FROM producten WHERE product_naam = '".$_POST["zoekbalk"]."'";
+        $sql = "SELECT * FROM producten WHERE product_naam = '".$_POST["zoekbalk"]."'";
         return;
     } else {
-        $query = "SELECT * FROM producten ORDER BY productenID ASC";
+        $sql = "SELECT * FROM producten ORDER BY productenID ASC";
     }
 }
 
 if (isset($_POST["submit"])) {
-    $query = "SELECT * FROM producten WHERE naam = East Side Shoarma";
+    $sql = "SELECT * FROM producten WHERE naam = East Side Shoarma";
 }
 
 if (isset($_POST["allessubmit"])) {
-    $query = "SELECT * FROM producten ORDER BY productenID ASC";
+    $sql = "SELECT * FROM producten ORDER BY productenID ASC";
 }
   
     if (!empty($result_producten)) {
@@ -51,7 +51,6 @@ if (isset($_POST["allessubmit"])) {
         echo "</div>";  
         }
     } else {
-      // Print een DIV uit met 'Er zijn geen producten gevonen'
         echo "<div>Er zijn geen producten gevonden</div>";
         $error = "No results!";
     }

@@ -11,7 +11,47 @@
     <title>Document</title>
 </head>
     <body class="admin-body">
-        <p class="welkom-admin">Welkom admin, <a class="log-uit" href="php/uitloggen.php">log uit</a></p>
+        <p class="welkom-admin">Welkom admin, <a class="log-uit" href="php/uitloggen.php"> log uit</a></p>
+            <div class="reserveren">
+                <table class="reserveren-table">
+                    <tr>
+                        <th>Naam</th>
+                        <th>Datum</th>
+                        <th>Aantal personen</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <?php 
+                        require_once('includes/connect.php');
+
+                        $sql = "SELECT * FROM reserveren";
+                        $stmt = $connect->prepare($sql);
+                        $stmt->execute();
+                        $result_reserveren = $stmt->fetchAll(); 
+                    
+                        foreach ($result_reserveren as $reserveren) {
+                            echo "<tr>";
+                                echo "<td>".$reserveren["naam"]."</td>";
+                                echo "<td>".$reserveren["datum"]."</td>";
+                                echo "<td>".$reserveren["aantal personen"]."></td>";
+                                echo "<td><button class='update-button'>Update</button></td>";
+                                echo "<td><button class='delete-button'>Delete</button></td>";
+                            echo "</tr>";
+                        } 
+                    ?>
+                    <?php
+                        // include_once('includes/connect.php')
+
+                        // $sql = 'DELETE FROM reserveren WHERE (naam, datum, aantal personen)';
+                        // $stmt->bindparam(":naam", $_POST['naam']);
+                        // $stmt->bindparam(":datum", $_POST['datum']);
+                        // $stmt->bindparam(":aantal personen", $_POST['aantal personen']);
+                        // $stmt->execute();
+
+                        header('Location: admin.php')
+                    ?>
+                </table>
+            </div>
             <div class="admin-container">
                 <form class="pizza-toevoegen-form" action="php/addProduct.php" method="post" >
                     <label class="pizza-toevoegen" for="text" id="aname">Naam product</label>
@@ -20,13 +60,15 @@
                     <input type="text" id="aprice" name="prijs" placeholder="Prijs...">
                     <label class="pizza-toevoegen" for="img" id="aimg">Afbeelding</label>
                     <input type="text" id="aimg" name="afbeelding" placeholder="Afbeelding...">
-                    <input type="submit" value="Toevoegen" name="toevoegen">
+                    <input class="toevoegen" type="submit" value="Toevoegen" name="toevoegen">
                 </form>
-                <table class="table">
+                <table class="pizza-table">
                     <tr>
                         <th>Naam</th>
                         <th>Prijs</th>
                         <th>Afbeelding</th>
+                        <th>Update</th>
+                        <th>Delete</th>
                     </tr>
                     <?php 
                         require_once('includes/connect.php');
@@ -38,16 +80,25 @@
                     
                         foreach ($result_producten as $product) {
                             echo "<tr>";
-                            echo "<td>".$product["naam"]."</td>";
-                            echo "<td>".$product["prijs"]."</td>";
-                            echo "<td><img src='image/".$product["afbeelding"]."'alt='".$product["naam"]."'></td>";
-                            echo "<td><button class='update-button'>Update</button></td>";
-                            echo "<td><button class='delete-button'>Delete</button></td>";
+                                echo "<td class='tdnaam'>".$product["naam"]."</td>";
+                                echo "<td>".$product["prijs"]."</td>";
+                                echo "<td><img src='image/".$product["afbeelding"]."'alt='".$product["naam"]."'></td>";
+                                echo "<td><button class='update-button'>Update</button></td>";
+                                echo "<td><button class='delete-button'>Delete</button></td>";
                             echo "</tr>";
-                        } 
+                        }
+                    ?>
+                    <?php
+                        // include_once('includes/connect.php')
+
+                        // $sql = 'DELETE FROM producten WHERE id';
+                        // $stmt->bindparam(":naam", $_POST['naam']);
+                        // $stmt->bindparam(":prijs", $_POST['prijs']);
+                        // $stmt->bindparam(":afbeelding", $_POST['afbeelding']);
+                        // $stmt->execute();
                     ?>
                 </table>
             </div>
-        </div>
+        </div>        
     </body>
 </html>

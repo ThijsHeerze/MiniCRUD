@@ -1,9 +1,10 @@
 <?php 
     include_once('includes/header.php');
 ?>
-      <div class="reserveercontainer"><b>Maak hieronder je reservering!</b></div>
-        <div class="hierkunjereserveren">
-          <div class="reserveerafbeelding2">
+      <div class="reserveercontainer"><p>Maak hieronder je reservering!</p></div>
+              
+        <!-- <div class='hierkunjereserveren'>  
+          <div class='reserveerafbeelding2'>
             <form class="reserveerform" action="index.php" method="post">
               <div class="reserveerform">
               <label for="uname"><b class="bnaam">Naam</b></label>
@@ -16,7 +17,38 @@
             </form>
           </div>
         </div>
-      </div>
+      </div> -->
+      <?php
+
+        require_once('includes/connect.php');
+          
+        $sql = "SELECT * FROM reserveren";
+        $stmt = $connect->prepare($sql);
+        $stmt->execute();
+        $result_reserveren = $stmt->fetchAll();
+
+      if (!empty($result_reserveren)) {
+      foreach ($result_reserveren as $reserveren) {
+          echo "<div class='hierkunjereserveren'>";
+            echo "<div class='reserveerafbeelding2'>";
+            echo "<div class='reserveerform'>";
+              echo "<label for='uname'><p class='bnaam'>Naam</p></label>";
+              echo "<input class='reserveerinput' type='text' placeholder='Naam...' name='uname' {$reserveren['datum']} required>";
+              echo "<label for='date'><p class='datum'>Datum</p></label>";
+              echo "<input class='reserveerinputdate' type='date' placeholder='Datum...' name='date' {$reserveren['datum']} required>";
+              echo "<label for='person'><p class='bnaam'>Aantal personen</p></label>";
+              echo "<input class='reserveerinput' type='person' placeholder='Aantal personen...' name='person' {$reserveren['aantal personen']} required>";
+              echo "<button class='reserveerbutton'>Reserveer</button>";
+              echo "</form>";
+            echo "</div>";
+          echo "</div>";
+        echo "</div>";  
+        }
+    } else {
+        echo "<div></div>";
+        $error = "No results!";
+    }
+    ?>
     <?php 
       // require_once('includes/connect.php');
 
@@ -37,14 +69,6 @@
       //   exit();
       // }
     ?>
-    <!-- <div class="drankenbody">
-    <div class="drankencontainer">
-        <img src="image/cola.webp" alt="" />
-        <form action="winkelwagen.php">
-          <input class="bestelknop" type="submit" value="Bestel" />
-        </form>
-      </div> ----------------->
-    <script src="JS/main.js"></script>
 
 <?php 
     include_once('includes/footer.php');
