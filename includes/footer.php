@@ -3,7 +3,7 @@
             <div class="footerborder">
                 <div class="footerfixed1">
                 <ul>
-                    <li><b>New York Pizza</b></li>
+                <p>New York Pizza</p>
                     <li>NYP Franchise</li>
                     <li>Over New York Pizza</li>
                     <li>Klantenservice</li>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="footerfixed2">
                 <ul>
-                <li><b>Producten</b></li>
+                <p>Producten</p>
                     <li>Allergenen</li>
                     <li>Menu</li>
                     <li>Pizza aanbiedingen</li>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="footerfixed3">
                 <ul>
-                <li><b>Overig</b></li>
+                <p>Overig</p>
                     <li>Algemene voorwaarden</li>
                     <li>Cookiestatement</li>
                     <li>Coupon voorwaarden</li>
@@ -34,7 +34,7 @@
                     <li>Blog</li>
                 </ul>
                 </div>
-                <div class="social"><li><b>Volg ons op</b></li>
+                <div class="social"><p>Volg ons</p>
                 <div class="footerimg">
                     <img src="image/facebook.svg" alt="facebook">
                     <img src="image/twitter.svg" alt="twitter">
@@ -49,5 +49,3 @@
             </div>
         </div>
     </footer>
-</body>
-</html>

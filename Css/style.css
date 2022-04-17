@@ -2,7 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
-  color: black;
+  color: white;
 }
 
 header {
@@ -364,8 +364,8 @@ nav ul li a:hover {
   margin-bottom: 25px;
   margin-top: 25px;
   background-color: #009a44;
-  border-top-right-radius: 18px;
-  border-bottom-left-radius: 18px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .pizza-naam,
@@ -387,7 +387,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   font-size: 25px;
-  border-bottom-left-radius: 18px;
+  border-bottom-left-radius: 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -505,7 +505,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: bold;
+  font-weight: bold;
 }
 
 .hierkunjereserveren {
@@ -619,13 +619,13 @@ input {
   justify-content: left;
   align-items: center;
   background-size: cover;
-  background-image: url(../image/inlogpizza.jpg);
+  background-image: url(../image/inlog.jpeg);
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .inloggen {
-  font-size: 45px;
+  font-size: 75px;
   width: 100%;
   height: 150px;
   display: flex;
@@ -698,13 +698,12 @@ input {
   text-decoration: none;
   letter-spacing: 1px;
   font-size: 20px;
-  height: auto;
   position: relative;
   color: #ffffff;
   text-align: center;
   transition-duration: 0.4s;
   overflow: hidden;
-  width: 275px;
+  width: 100%;
   height: 75px;
 }
 .loginbutton:after {
@@ -729,53 +728,13 @@ input {
   transition: 0s;
 }
 
-.maak-een-account {
-  background-color: rgb(255, 255, 65);
-  padding: 14px 20px;
-  margin: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-size: 20px;
-  border-radius: 8px;
-  height: auto;
-  position: relative;
-  color: black;
-  text-align: center;
-  transition-duration: 0.4s;
-  overflow: hidden;
-}
-.maak-een-account:after {
-  transition-duration: 0.75s;
-  color: white;
-  transition-duration: 0.1s;
-  content: "";
-  background: white;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s;
-}
-.maak-een-account:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s;
-}
-
 .reserveerbuttonfooter {
   position: relative;
   background-color: #ff1700;
   border: none;
   font-size: 20px;
   color: #ffffff;
-  width: 275px;
+  width: 180%;
   height: 75px;
   text-align: center;
   transition-duration: 0.4s;
@@ -784,6 +743,36 @@ input {
   cursor: pointer;
   margin-top: 5px;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 1200px) {
+  .reserveerbuttonfooter {
+    width: 170%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .reserveerbuttonfooter {
+    width: 160%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .reserveerbuttonfooter {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .reserveerbuttonfooter {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .reserveerbuttonfooter {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .reserveerbuttonfooter {
+    width: 190px;
+  }
 }
 
 .reserveerbuttonfooter:after {
@@ -804,6 +793,13 @@ input {
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+@media screen and (max-width: 1200px) {
+  .reserveerbuttonfooter,
+  .loginbutton {
+    position: column;
+  }
 }
 
 .cancelbtn {
@@ -837,6 +833,30 @@ footer {
   background-color: rgb(0 0 0 / 30%);
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+  color: white;
+}
+
+footer li {
+  opacity: 0.7;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 700px) {
+  footer p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer p {
+    font-size: 23px;
+  }
 }
 
 .footerborder {
@@ -849,12 +869,7 @@ footer {
   align-content: center;
 }
 
-.footerborder b {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-
-.footerfixed1 ul li b {
+.footerfixed1 ul li p {
   padding-bottom: 10px;
 }
 
