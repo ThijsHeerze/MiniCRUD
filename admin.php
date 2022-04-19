@@ -33,8 +33,8 @@
                             echo "<tr>";
                                 echo "<td>".$reserveren["naam"]."</td>";
                                 echo "<td>".$reserveren["datum"]."</td>";
-                                echo "<td>".$reserveren["aantal"]."></td>";
-                                echo "<td><button class='update-button'>Update</button></td>";
+                                echo "<td>".$reserveren["aantal"]."</td>";
+                                echo "<td><a href='php/updateReservation.php?id=".$reserveren['id']."'><button class='update-button'>Update</button></a></td>";
                                 echo "<td><a href='php/deleteReservation.php?id=".$reserveren['id']."'><button class='delete-button'>Delete</button></a></td>";
                             echo "</tr>";
                         } 
