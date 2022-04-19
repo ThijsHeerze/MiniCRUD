@@ -24,7 +24,7 @@ body.admin-body {
 .log-uit {
   text-decoration: none;
   padding-left: 11px;
-  color: red !important;
+  color: red;
 }
 
 .reserveren-table {
