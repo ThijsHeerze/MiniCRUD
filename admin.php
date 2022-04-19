@@ -33,22 +33,11 @@
                             echo "<tr>";
                                 echo "<td>".$reserveren["naam"]."</td>";
                                 echo "<td>".$reserveren["datum"]."</td>";
-                                echo "<td>".$reserveren["aantal personen"]."></td>";
+                                echo "<td>".$reserveren["aantal"]."></td>";
                                 echo "<td><button class='update-button'>Update</button></td>";
-                                echo "<td><button class='delete-button'>Delete</button></td>";
+                                echo "<td><a href='php/deleteReservation.php?id=".$reserveren['id']."'><button class='delete-button'>Delete</button></a></td>";
                             echo "</tr>";
                         } 
-                    ?>
-                    <?php
-                        // include_once('includes/connect.php')
-
-                        // $sql = 'DELETE FROM reserveren WHERE (naam, datum, aantal personen)';
-                        // $stmt->bindparam(":naam", $_POST['naam']);
-                        // $stmt->bindparam(":datum", $_POST['datum']);
-                        // $stmt->bindparam(":aantal personen", $_POST['aantal personen']);
-                        // $stmt->execute();
-
-                        header('Location: admin.php')
                     ?>
                 </table>
             </div>
@@ -87,15 +76,6 @@
                                 echo "<td><button class='delete-button'>Delete</button></td>";
                             echo "</tr>";
                         }
-                    ?>
-                    <?php
-                        // include_once('includes/connect.php')
-
-                        // $sql = 'DELETE FROM producten WHERE id';
-                        // $stmt->bindparam(":naam", $_POST['naam']);
-                        // $stmt->bindparam(":prijs", $_POST['prijs']);
-                        // $stmt->bindparam(":afbeelding", $_POST['afbeelding']);
-                        // $stmt->execute();
                     ?>
                 </table>
             </div>

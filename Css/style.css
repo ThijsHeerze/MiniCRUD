@@ -289,7 +289,7 @@ nav ul li a:hover {
   font-size: 80px;
   width: 100%;
   height: 900px;
-  background-image: url(../image/salami.jpg);
+  background-image: url(../image/salami.jpeg);
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 50%);
   display: flex;
