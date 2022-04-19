@@ -31,7 +31,7 @@
                     <li>Coupon voorwaarden</li>
                     <li>Privacy Statement</li>
                     <li>Nieuws en publicaties</li>
-                    <li>Blog</li>
+                    <li>Blog van Thijmen Lemmens</li>
                 </ul>
                 </div>
                 <div class="social"><p>Volg ons</p>
