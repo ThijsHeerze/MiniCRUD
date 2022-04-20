@@ -12,7 +12,7 @@
         $stmt->execute();
         
         header('Location: ../admin.php');
-    // } else {
-    //     header('Location: ../login.php');
-    // }
+    } else {
+        header('Location: ../login.php');
+    }
 ?>
