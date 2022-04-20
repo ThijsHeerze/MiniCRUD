@@ -34,7 +34,7 @@
                                 echo "<td>".$reserveren["naam"]."</td>";
                                 echo "<td>".$reserveren["datum"]."</td>";
                                 echo "<td>".$reserveren["aantal"]."</td>";
-                                echo "<td><a href='php/updateReservation.php?id=".$reserveren['id']."'><button class='update-button'>Update</button></a></td>";
+                                echo "<td><a href='updateReservation.php?id=".$reserveren['id']."'><button class='update-button'>Update</button></a></td>";
                                 echo "<td><a href='php/deleteReservation.php?id=".$reserveren['id']."'><button class='delete-button'>Delete</button></a></td>";
                             echo "</tr>";
                         } 
@@ -72,8 +72,8 @@
                                 echo "<td class='tdnaam'>".$product["naam"]."</td>";
                                 echo "<td>".$product["prijs"]."</td>";
                                 echo "<td><img src='image/".$product["afbeelding"]."'alt='".$product["naam"]."'></td>";
-                                echo "<td><button class='update-button'>Update</button></td>";
-                                echo "<td><button class='delete-button'>Delete</button></td>";
+                                echo "<td><a href='updateProduct.php?id=".$product['id']."'><button class='update-button'>Update</button></a></td>";
+                                echo "<td><a href='php/deleteProduct.php?id=".$product['id']."'><button class='delete-button'>Delete</button></a></td>";
                             echo "</tr>";
                         }
                     ?>

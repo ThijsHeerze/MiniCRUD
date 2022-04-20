@@ -24,7 +24,7 @@
     <body>
         <div class="update-body">
             <div class="update-container">
-                <form class="update-product" action="php/updateProduct.php" method="post" >
+                <form class="update-product" action="updateProduct.php" method="post" >
                     <label class="update-id" for="id" id="update">ID</label>
                     <input type="number" id="aname" name="id" value="<?php echo $product['id']; ?>" readonly>
                     <label class="update-naam" for="text" id="update">Naam product</label>

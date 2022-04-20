@@ -1190,6 +1190,10 @@ footer p {
 
 .search-form {
   color: black !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
 
 .search-input {
