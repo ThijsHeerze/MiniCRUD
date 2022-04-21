@@ -298,7 +298,7 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-.pizzas {
+/* .pizzas {
   position: relative;
   background-color: #ff1700;
   border: none;
@@ -331,7 +331,7 @@ nav ul li a:hover {
   margin: 0;
   opacity: 1;
   transition: 0s;
-}
+} */
 
 .pizzabody {
   display: flex;
@@ -342,6 +342,12 @@ nav ul li a:hover {
   /* background-image: url(../image/salami.jpg); */
   background-color: rgb(222, 214, 214);
   background-size: cover;
+}
+@media screen and (max-width: 900px) {
+  .pizzabody {
+    width: 200px;
+    height: auto;
+  }
 }
 
 .pizza-body {
@@ -1177,7 +1183,6 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    /* margin-top: 25px; */
   }
 }
 
