@@ -11,17 +11,17 @@
     <title>Document</title>
 </head>
 <body class="indexbody">
-    <header>
-        <div class="header"></div>
-        <nav>
-            <div class="logo">
-                <img src="image/nyplogo.png" alt="logo">
-            </div>
+    <header id="top">
+        <a href="#top"><div class="back-to-top">Terug</div></a>
+            <div class="header"></div>
+            <nav>
+                <div class="logo">
+                    <img src="image/nyplogo.png" alt="logo">
+                </div>
             <ul class="ul"> 
                 <li><a href="index.php">Home</a></li>
                 <li><a href="pizza.php">Pizza's</a></li>
                 <li><a href="reserveren.php">Reserveren</a></li>          
-                <li><a class="navbutton" href="winkelwagen.php">Winkelwagen</a></li></div>
                 <li><a class="navbutton" href="login.php">Inloggen</a></li></div>
             </ul>
         </nav>

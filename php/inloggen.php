@@ -19,8 +19,4 @@
             header('Location: ../login.php?error=Gebruikersnaam of wachtwoord is fout!');
         }
     }
-    //  else 
-    // //     header('Location: ../login.php');
-    // //     exit();
-    // // }
 ?>

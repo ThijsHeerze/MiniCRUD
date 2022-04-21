@@ -2,12 +2,14 @@
     include_once('includes/header.php');
     include_once('includes/connect.php');
 ?>
-    <div class="maakjekeuze"><b>Kies hieronder jouw pizza!</b></div>
-    <div class="zoekbalk"><p>Waar bent u naar opzoek?</p></div>
-        <form class="search-form" action="#" method="get">
-            <input class="search-input" type="text" name="search" placeholder="Zoek">
-            <button class="search-button" type="submit" name="submit-search">Zoek...</button>
-        </form>
+    <div class="maakjekeuze">
+        <p class="kiesjepizza">Kies hieronder jouw pizza!</p>
+        <p class="zoekbalk">Welke pizza zoekt u?</p>
+            <form class="search-form" action="#" method="get">
+                <input class="search-input" type="text" name="search" placeholder="Zoek...">
+                <button class="search-button" type="submit" name="submit-search">Zoek</button>
+            </form>
+    </div>
     <div class="pizzabody">
 <?php
     if (isset($_GET['search'])) {
