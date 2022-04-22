@@ -63,6 +63,7 @@ tr th {
   margin-bottom: 50px;
   row-gap: 30px;
   column-gap: 30px;
+  overflow: hidden;
 }
 
 .pizza-toevoegen {
@@ -85,12 +86,26 @@ input {
 
 .update-button {
   background-color: #6bcb77;
-  width: 75px;
-  height: 25px;
+  width: 80px;
+  height: 30px;
 }
 
 .delete-button {
   background-color: red;
-  width: 75px;
-  height: 25px;
+  width: 80px;
+  height: 30px;
+}
+
+.update-reservering {
+  background-color: rgb(0 0 0 / 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.updatebutton {
+  background-color: #6bcb77;
 }

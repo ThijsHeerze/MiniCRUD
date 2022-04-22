@@ -9,7 +9,6 @@
         $stmt->execute();
         $result = $stmt->fetch();
 
-        // IF statement om te kijken of er EEN result is teruggekomen
         if ($stmt->rowcount() > 0) {
             session_start();
             $_SESSION['admin'] = true;
@@ -19,8 +18,5 @@
         } else {
             header('Location: ../login.php?error=Gebruikersnaam of wachtwoord is fout!');
         }
-    } else {
-        header('Location: ../login.php');
-        exit();
     }
 ?>
